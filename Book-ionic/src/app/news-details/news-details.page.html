@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>News details</ion-title>
+    <ion-button  (click)="backToNews()">
+      <ion-icon name="arrow-round-back"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngIf="currentNews">
+    <ion-card-title>{{currentNews.titre}}</ion-card-title>
+    <ion-img src="{{currentNews.imagePath}}" alt="{{currentNews.titre}}"></ion-img>
+    <ion-card-subtitle class="description">{{currentNews.longDescription}}</ion-card-subtitle>
+    <ion-card-subtitle class="infoPub">Publier le : {{currentNews.datePublication}}</ion-card-subtitle>
+    <ion-card-subtitle class="infoPub">Publier par : {{currentNews.auteur}}</ion-card-subtitle>
+    <ion-item>
+      <ion-label>Nom Complet</ion-label><br>
+      <ion-input type="text"></ion-input>
+      <ion-label>Commentaire</ion-label>
+      <ion-textarea></ion-textarea>
+    </ion-item>
+  </ion-card>
+</ion-content>

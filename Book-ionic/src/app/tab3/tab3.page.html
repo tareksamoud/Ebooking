@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Ajouter Livre
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <form #f="ngForm" (ngSubmit)="ajouterBook(f.value)">
+      <ion-item class="rounded">
+        <ion-label position="floating">Titre : </ion-label>
+        <ion-input type="text" name="titre" ngModel required></ion-input>
+      </ion-item>
+
+      <ion-item class="rounded">
+        <ion-label position="floating">Isbn : </ion-label>
+        <ion-input type="text" name="isbn" ngModel></ion-input>
+      </ion-item>
+
+      <ion-item class="rounded">
+        <ion-label position="floating">Nombre de page : </ion-label>
+        <ion-input type="text" name="nombrPage" ngModel></ion-input>
+      </ion-item>
+
+      <ion-item class="rounded">
+        <ion-label position="floating">Date Publication : </ion-label>
+        <ion-input type="text" name="datePublication" ngModel required></ion-input>
+      </ion-item>
+
+      <ion-item class="rounded">
+        <ion-label position="fixed">Image : </ion-label>
+        <ion-input type="file" name="imagePath" ngModel></ion-input>
+      </ion-item>
+
+      <ion-item class="rounded">
+        <ion-label position="floating">Short description : </ion-label>
+        <ion-textarea type="text" name="shortDescription" ngModel></ion-textarea>
+      </ion-item>
+
+      <ion-item class="rounded">
+        <ion-label position="floating">Long description : </ion-label>
+        <ion-textarea type="text" name="longDescription" ngModel></ion-textarea>
+      </ion-item>
+
+      <ion-item class="rounded">
+        <ion-label position="floating">Status : </ion-label>
+        <ion-input type="text" name="status" ngModel></ion-input>
+      </ion-item>
+
+      <ion-item class="rounded">
+        <ion-label position="floating">Auteur : </ion-label>
+        <ion-input type="text" name="authors" ngModel></ion-input>
+      </ion-item>
+
+      <ion-item class="rounded">
+        <ion-label position="floating">Categories : </ion-label>
+        <ion-input type="text" name="categories" ngModel></ion-input>
+      </ion-item>
+      <ion-button type="submit">Ajouter</ion-button>
+    </form>
+  </ion-list>
+</ion-content>

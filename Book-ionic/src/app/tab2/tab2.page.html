@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      News paper
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="newsPaper">
+  <ion-card *ngFor="let n of newsPaper">
+    <ion-img src="{{n.imagePath}}" alt="{{n.titre}}"></ion-img>
+    <ion-card-title stutus="0" (click)="goToNewsDetails(n)">{{n.titre}}</ion-card-title>
+    <ion-card-subtitle>{{n.shortDescription}}</ion-card-subtitle>
+    <ion-label>public le : {{n.datePublication}}</ion-label>
+  </ion-card>
+</ion-content>

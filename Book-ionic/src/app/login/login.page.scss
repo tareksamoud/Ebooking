@@ -1,0 +1,17 @@
+#container {
+    width: 300px;
+    margin: 50% auto;
+}
+
+.rounded {
+    width: 100%;
+    height: 70px;
+    -moz-border-radius: 50px;
+    -webkit-border-radius: 50px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+.btn_connect{
+    width: 100%;
+}

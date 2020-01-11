@@ -1,0 +1,40 @@
+.cardTitle{
+    margin: 10px 0;
+    font-size: 22px;
+    text-align: center
+}
+ion-img {
+    width: 250px;
+    display: block;
+    margin: auto;
+}
+
+.cardSubtitle{
+    font-size: 12px;
+    margin: 10px 0;
+    padding-left: 10px
+
+}
+.cardSubtitle>span{
+    color: #000;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.redirectionLabel{
+    cursor: pointer;
+    color: #0072ff;
+    font-size: 18px;
+    margin: 10px 0 10px 10px;
+}
+
+
+.pagination{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.navigationPage{
+    cursor: pointer;
+}

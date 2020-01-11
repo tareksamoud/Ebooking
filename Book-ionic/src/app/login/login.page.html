@@ -1,0 +1,27 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content padding>
+  <div id="container">
+    <form (ngSubmit)="goToHome(f)" #f="ngForm">
+      <ion-list class="content">
+      <ion-item class="rounded">
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input type="text" name="nomuser" ngModel required>
+          <ion-icon name="person"></ion-icon>
+        </ion-input>
+      </ion-item>
+
+      <ion-item class="rounded">
+        <ion-label position="stacked">Username</ion-label>
+        <ion-input type="password" name="motpasse" placeholder="*****" ngModel>
+          <ion-icon name="key"></ion-icon>
+        </ion-input>
+      </ion-item>
+        <ion-button type="submit" class="btn_connect">Se connecter</ion-button>
+      </ion-list>
+    </form>
+  </div>
+
+</ion-content>

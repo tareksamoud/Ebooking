@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Books Catalogue</ion-title>
+    <ion-button (click)="goToAddBook()">
+      <ion-icon name="add-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="books">
+  <ion-card *ngFor="let b of books" color="light">
+    <ion-card-title class="cardTitle">{{b.titre}}</ion-card-title>
+      <ion-img src="{{b.imagePath}}" alt="{{b.shortDescription}}"></ion-img>
+    <ion-card-subtitle class="cardSubtitle" ><span>Auteur : </span>{{b.authors}}</ion-card-subtitle>
+      <ion-card-subtitle class="cardSubtitle"><span>Description : </span></ion-card-subtitle>
+      <ion-card-subtitle class="cardSubtitle"><span>{{b.shortDescription}}</span></ion-card-subtitle>
+    <ion-label class="redirectionLabel" status="1" (click)="goToBooksDetails(b)">Click here for more details ...</ion-label>
+  </ion-card>
+  <ion-list class="pagination">
+    <ion-item *ngFor="let page of pages; let i = index">
+      <a (click)="goToNextPage(i)" class="navigationPage">{{i}}</a>
+    </ion-item>
+  </ion-list>
+</ion-content>
